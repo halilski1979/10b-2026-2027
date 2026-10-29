@@ -19,7 +19,43 @@
             Console.WriteLine( num.Length);
 
             
-            Console.WriteLine(string.Join(' ',num.Reverse()));
+            //Обръщане на елементите на масив
+            Array.Reverse(num);
+            Console.WriteLine(string.Join(',',num));
+
+            //Сортиране на масив
+            Array.Sort(num);
+            Console.WriteLine(string.Join(' ',num));
+
+
+            //Произведение на масив
+            int pr = 1;
+            for (int i = 0; i < num.Length; i++)
+            {
+                pr *= num[i];
+            }
+            Console.WriteLine($"Proizvedenie: {pr}");
+
+            //Печат на четни числа
+            for (int i = 0; i < num.Length; i++)
+            {
+                if (num[i]%2==0)
+                {
+                    Console.Write($" {num[i]}");
+                }
+            }
+            int sumNechetni = 0;
+            for (int i = 0; i < num.Length; i++)
+            {
+                if (num[i] % 2 == 1)
+                {
+                    sumNechetni+=num[i];
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine(sumNechetni);
+
+
         }
     }
 }
